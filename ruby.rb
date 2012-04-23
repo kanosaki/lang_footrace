@@ -11,17 +11,17 @@ class Solver
     (n+1..n*2).select{|i| i % 2 != 0 && self.is_prime(i)}.length
   end
 
-  def is_prime n
-    if @memo.include? n
-      true
-    else
-      result = is_prime_raw n
-      @memo.add n if result
-      result
-    end
-  end
+#  def is_prime n
+#    if @memo.include? n
+#      true
+#    else
+#      result = is_prime_raw n
+#      @memo.add n if result
+#      result
+#    end
+#  end
 
-  def is_prime_raw n
+  def is_prime n
     return false if n < 2
     return true if n == 2
     return false if n % 2 == 0

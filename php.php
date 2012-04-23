@@ -6,7 +6,7 @@ class Solver
         $this->primes = array();
     }
 
-    function is_prime_raw(&$n)
+    function is_prime(&$n)
     {
         if ($n < 2) return false;
         if ($n == 2) return true;
@@ -18,17 +18,17 @@ class Solver
         return true;
     }
 
-    function is_prime(&$n)
-    {
-        if ($this->primes[$n])
-            return true;
-        else
-        {
-            $result = $this->is_prime_raw($n);
-            if ($result) $this->primes[$n] = true;
-            return $result;
-        }
-    }
+//    function is_prime(&$n)
+//    {
+//        if ($this->primes[$n])
+//            return true;
+//        else
+//        {
+//            $result = $this->is_prime_raw($n);
+//            if ($result) $this->primes[$n] = true;
+//            return $result;
+//        }
+//    }
 
     function solve(&$n)
     {

@@ -7,6 +7,7 @@ PYTHON3=/usr/local/bin/python3
 JAVA=/usr/bin/java
 LISP="/usr/local/bin/sbcl --script "
 PHP="/usr/bin/php"
+JAVASCRIPT="/usr/local/bin/node"
 
 
 coms=(
@@ -15,8 +16,9 @@ coms=(
   "${RUBY18} ./ruby.rb"
   "${RUBY19} ./ruby.rb"
   "${JAVA} Java"
-  "${LISP} ./lisp"
+  "${LISP} ./lisp.lisp"
   "${PHP} ./php.php"
+  "${JAVASCRIPT} ./javascript.js"
   "./cpp"
   "./haskell"
 )

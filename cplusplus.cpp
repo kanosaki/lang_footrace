@@ -30,7 +30,7 @@ Solver::is_in_memo(int n)
 }
 
 bool
-Solver::is_prime_raw(int n)
+Solver::is_prime(int n)
 {
     if (n < 2) return false;
     if (n == 2) return true;
@@ -41,21 +41,6 @@ Solver::is_prime_raw(int n)
             return false;
     }
     return true;
-}
-
-bool
-Solver::is_prime(int n)
-{
-    if (is_in_memo(n)) {
-        return true;
-    } else {
-      if (is_prime_raw(n)) {
-          _cache.insert(n);
-          return true;
-      } else {
-          return false;
-      }
-    }
 }
 
 int

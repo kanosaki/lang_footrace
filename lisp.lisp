@@ -7,19 +7,19 @@
           (has-factor (+ cur 2) upper))
       NIL))
 
-(defun is-prime-raw (n)
+(defun is-prime (n)
   (cond ((< n 2) NIL)
         ((= n 2) T)
         ((= (mod n 2) 0) NIL)
         (T (not (has-factor 3 n)))))
 
-(defun is-prime (n)
-  (if (gethash n *primes*)
-    T
-    (let ((result (is-prime-raw n)))
-      (if result
-        (setf (gethash n *primes*) T))
-      result)))
+;(defun is-prime (n)
+;  (if (gethash n *primes*)
+;    T
+;    (let ((result (is-prime-raw n)))
+;      (if result
+;        (setf (gethash n *primes*) T))
+;      result)))
 
 (defun count-primes (cur acc upper)
   (if (<= cur upper)

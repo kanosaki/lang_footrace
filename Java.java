@@ -16,18 +16,18 @@ public class Java {
         return ret;
     }
 
-    public boolean isPrime(int n){
-        if(_primes.contains(n)){
-            return true;
-        }else{
-            boolean result = isPrimeRaw(n);
-            if(result)
-                _primes.add(n);
-            return result;
-        }
-    }
+//    public boolean isPrime(int n){
+//        if(_primes.contains(n)){
+//            return true;
+//        }else{
+//            boolean result = isPrimeRaw(n);
+//            if(result)
+//                _primes.add(n);
+//            return result;
+//        }
+//    }
 
-    protected boolean isPrimeRaw(int n){
+    protected boolean isPrime(int n){
         if (n < 2) return false;
         if (n == 2) return true;
         if (n % 2 == 0) return false;
